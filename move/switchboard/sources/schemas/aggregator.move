@@ -1,5 +1,5 @@
 module switchboard::aggregator {
-    use aptos_framework::account::{Self, SignerCapability};
+    use aptos_framework::account::SignerCapability;
     use aptos_framework::timestamp;
     use aptos_framework::block;
     use switchboard::math::{Self, SwitchboardDecimal};
@@ -8,6 +8,9 @@ module switchboard::aggregator {
     use std::signer; 
     use std::vector;
     use std::coin::{Self, Coin};
+
+    #[test_only]
+    use aptos_framework::account;
 
     // Aggregator Round Data
     struct LatestConfirmedRound {}
